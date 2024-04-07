@@ -2,7 +2,7 @@
  <img src="https://github.com/erikdubois/arcolinux-nemesis/blob/master/Personal/settings/arcolinuxws.png">
 </p>
 
-# arcox iso
+# arcoplasma iso
 
 # Follow build and installation tutorials on
 
