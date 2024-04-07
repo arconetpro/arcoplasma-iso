@@ -976,7 +976,7 @@ arcolinux-zsh-git
 #colloid-cursors-git
 
 ###########################################################################
-####                   ARCOX ISO SPECIFIC
+####                            ISO SPECIFIC
 ###########################################################################
 
 linux-tkg-eevdf
@@ -987,7 +987,7 @@ linux-tkg-eevdf-headers
 ###########################################################################
 
 arco-calamares-wayland
-arcox-calamares-config
+arcoplasma-calamares-config
 #arcolinux-system-installation-git
 arcolinux-system-installation-dev-git
 #arcolinux-welcome-app-git

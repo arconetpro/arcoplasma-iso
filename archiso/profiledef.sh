@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="arcox"
-iso_label="arcox-v24.05.01"
+iso_name="arcoplasma"
+iso_label="arcoplasma-v24.05.01"
 iso_publisher="ArcoLinux <http://www.arcolinux.info>"
 iso_application="ArcoLinux Live/Rescue CD"
 iso_version="v24.05.01"
