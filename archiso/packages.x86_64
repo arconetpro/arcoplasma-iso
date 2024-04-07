@@ -979,8 +979,8 @@ arcolinux-zsh-git
 ####                            ISO SPECIFIC
 ###########################################################################
 
-linux-tkg-eevdf
-linux-tkg-eevdf-headers
+linux-cachyos
+linux-cachyos-headers
 
 ###########################################################################
 ####                               CALAMARES
