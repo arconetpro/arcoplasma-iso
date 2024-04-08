@@ -428,8 +428,8 @@ breeze
 #xcursor-vanilla-dmz-aa
 
 ###fonts
-ttf-font-awesome
-ttf-ms-fonts
+#ttf-font-awesome
+#ttf-ms-fonts
 
 ###icons
 #faba-icon-theme-git
@@ -1085,6 +1085,9 @@ partitionmanager
 ripgrep
 spectacle
 surfn-plasma-dark-icons-git
+ttf-ms-fonts
+ttf-font-awesome
+ttf-jetbrains-mono-nerd
 variety
 vimix-cursors
 yad
