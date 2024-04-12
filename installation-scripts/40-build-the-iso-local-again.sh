@@ -36,7 +36,7 @@ echo
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 76-1"
 	buildFolder=$HOME"/arcoplasma-build"
-	outFolder=$HOME"/arcoplasma-Out"
+	outFolder=$HOME"/arcoplasma-out"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	# If you want to add packages from the chaotics-aur repo then
