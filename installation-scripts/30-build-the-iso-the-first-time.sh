@@ -34,7 +34,7 @@ echo
 	isoLabel='arcoplasma-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 76-1"
+	archisoRequiredVersion="archiso 77-1"
 	buildFolder=$HOME"/arcoplasma-build"
 	outFolder=$HOME"/arcoplasma-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
