@@ -216,7 +216,7 @@ echo
 		echo "Adding our chaotics repo to /etc/pacman.conf"
 		printf "\n" | sudo tee -a $buildFolder/archiso/pacman.conf
 		printf "\n" | sudo tee -a $buildFolder/archiso/airootfs/etc/pacman.conf
-		cat chaotics-repo | sudo tee -a $buildFolder/archiso/pacman.conf
+		cat no-chaotics-repo | sudo tee -a $buildFolder/archiso/pacman.conf
 		cat no-chaotics-repo | sudo tee -a $buildFolder/archiso/airootfs/etc/pacman.conf
 	fi
 
