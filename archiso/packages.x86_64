@@ -590,6 +590,7 @@ arconet-xfce
 ####                 ARCOLINUX APPS
 ###########################################################################
 
+archlinux-kernel-manager
 archlinux-logout-git
 archlinux-tweak-tool-git
 arcolinux-app-glade-git
