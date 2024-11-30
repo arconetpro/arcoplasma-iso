@@ -136,7 +136,7 @@ xl2tpd
 aic94xx-firmware
 dialog
 dnsutils
-libadwaita
+#libadwaita
 linux-headers
 logrotate
 ntp
@@ -322,7 +322,7 @@ duf
 edid-decode-git
 #evince
 expac
-file-roller
+#file-roller
 #filezilla
 git
 gksu
@@ -381,7 +381,7 @@ unzip
 #xapp
 #xdg-desktop-portal-gtk
 #yt-dlp
-zenity
+#zenity
 zsh
 zsh-completions
 zsh-syntax-highlighting
