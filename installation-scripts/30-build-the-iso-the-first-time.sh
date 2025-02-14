@@ -117,7 +117,7 @@ else
     tput sgr0
     echo "################################################################## "
     
-    bash "$installed_dir/get-the-keys-and-mirrors.sh"
+    bash "$installed_dir/get-the-keys-and-mirrors-arcolinux.sh"
     
 fi
 
@@ -134,7 +134,6 @@ echo
 	#First letter of desktop is small letter
 
 	desktop="plasma"
-	dmDesktop="plasma"
 
 	arcolinuxVersion='v25.03.02'
 
@@ -150,6 +149,19 @@ echo
 	# that are hosted on chaotics-aur in the packages.x86_64 at the bottom
 
 	chaoticsrepo=false
+
+	if [[ "$chaoticsrepo" == "true" ]]; then
+	    if pacman -Q chaotic-keyring &>/dev/null && pacman -Q chaotic-mirrorlist &>/dev/null; then
+	        echo "Chaotic keyring and mirrorlist present"
+	    else
+	        if [[ -f "$installed_dir/get-the-keys-and-mirrors-chaotic-aur.sh" ]]; then
+	            bash "$installed_dir/get-the-keys-and-mirrors-chaotic-aur.sh"
+	        else
+	            echo "Error: Installation script not found at $installed_dir"
+	            exit 1
+	        fi
+	    fi
+	fi
 	
 	# If you are ready to use your personal repo and personal packages
 	# https://arcolinux.com/use-our-knowledge-and-create-your-own-icon-theme-combo-use-github-to-saveguard-your-work/
@@ -233,13 +245,12 @@ echo
 		exit 1
 	fi
 
+	archisoVersion=$(pacman -Q archiso)
+
 	# Saving current archiso version to readme
 	sed -i "s/\(^archiso-version=\).*/\1$archisoVersion/" ../archiso.readme
 
-	archisoVersion=$(pacman -Q archiso)
-
 	# overview
-
 	
 	echo "################################################################## "
 	tput setaf 2
@@ -363,40 +374,11 @@ echo
 echo "################################################################## "
 tput setaf 2
 echo "Phase 5 : "
-echo "- Changing all references"
 echo "- Adding time to /etc/dev-rel"
 echo "- Clean cache"
 tput sgr0
 echo "################################################################## "
 echo
-
-	#Setting variables
-
-	#profiledef.sh
-	oldname1='iso_name="arcoplasma'
-	newname1='iso_name="arcoplasma'
-
-	oldname2='iso_label="arcoplasma'
-	newname2='iso_label="arcoplasma'
-
-	oldname3='arcoplasma'
-	newname3='arcoplasma'
-
-	#hostname
-	oldname4='arcoplasma'
-	newname4='arcoplasma'
-
-	#sddm.conf user-session
-	oldname5='Session=xfce'
-	newname5='Session='$dmDesktop
-
-	echo "Changing all references"
-	echo
-	sed -i 's/'$oldname1'/'$newname1'/g' $buildFolder/archiso/profiledef.sh
-	sed -i 's/'$oldname2'/'$newname2'/g' $buildFolder/archiso/profiledef.sh
-	sed -i 's/'$oldname3'/'$newname3'/g' $buildFolder/archiso/airootfs/etc/dev-rel
-	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/airootfs/etc/hostname
-	sed -i 's/'$oldname5'/'$newname5'/g' $buildFolder/archiso/airootfs/etc/sddm.conf.d/kde_settings.conf
 
 	echo "Adding time to /etc/dev-rel"
 	date_build=$(date -d now)
