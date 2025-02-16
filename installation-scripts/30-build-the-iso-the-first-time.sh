@@ -141,7 +141,7 @@ echo
 
 	desktop="plasma"
 
-	arcolinuxVersion='v25.03.04'
+	arcolinuxVersion='v25.03.05'
 
 	isoLabel='arcoplasma-'$arcolinuxVersion'-x86_64.iso'
 
